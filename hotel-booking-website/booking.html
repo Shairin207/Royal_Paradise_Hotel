@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking | Royal Paradise Luxury Hotel</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/booking.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+    <div class="header-inner">
+        <h1 class="brand">Royal Paradise Luxury Hotel</h1>
+        <nav class="main-nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="rooms.html">Rooms</a>
+            <a class="active" href="booking.html">Booking</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="page-banner">
+        <p class="section-label">Reservation</p>
+        <h2>Book Your Stay</h2>
+        <p>Complete the form and check the live price estimate.</p>
+    </section>
+
+    <section class="booking-layout section-narrow">
+        <form id="bookingForm" class="booking-form" novalidate>
+            <h2>Guest Information</h2>
+
+            <div class="form-group">
+                <label for="fullName">Full Name *</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Enter your full name">
+                <small id="fullNameError" class="error-message"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" placeholder="name@example.com">
+                <small id="emailError" class="error-message"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="bookingPassword">Booking Password *</label>
+                <input type="password" id="bookingPassword" name="bookingPassword" placeholder="Create a strong password">
+                <small id="passwordMessage" class="help-message">Use 8+ characters with uppercase, lowercase and a number.</small>
+                <small id="passwordError" class="error-message"></small>
+            </div>
+
+            <h2>Stay Details</h2>
+
+            <div class="form-group">
+                <label for="roomType">Room Type *</label>
+                <select id="roomType" name="roomType">
+                    <option value="">Select a room</option>
+                    <option value="luxury">Luxury Suite - $500/night</option>
+                    <option value="deluxe">Deluxe Suite - $350/night</option>
+                    <option value="premium">Premium Suite - $250/night</option>
+                </select>
+                <small id="roomTypeError" class="error-message"></small>
+            </div>
+
+            <div class="date-grid">
+                <div class="form-group">
+                    <label for="checkInDate">Check-in Date *</label>
+                    <input type="date" id="checkInDate" name="checkInDate">
+                    <small id="checkInError" class="error-message"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="checkOutDate">Check-out Date *</label>
+                    <input type="date" id="checkOutDate" name="checkOutDate">
+                    <small id="checkOutError" class="error-message"></small>
+                </div>
+            </div>
+
+            <fieldset class="form-group option-group">
+                <legend>Extra Facilities</legend>
+                <label><input class="facility-checkbox" type="checkbox" value="Breakfast"> Breakfast</label>
+                <label><input class="facility-checkbox" type="checkbox" value="Spa"> Spa</label>
+                <label><input class="facility-checkbox" type="checkbox" value="Airport Pickup"> Airport Pickup</label>
+            </fieldset>
+
+            <button class="button button-gold submit-button" type="submit">Check Booking</button>
+            <p id="formMessage" class="form-message" aria-live="polite"></p>
+        </form>
+
+        <!-- Advanced JavaScript feature: live price calculator -->
+        <aside class="booking-estimate" aria-live="polite">
+            <p class="section-label">Live Calculator</p>
+            <h2>Booking Estimate</h2>
+            <dl class="estimate-list">
+                <div><dt>Room</dt><dd id="estimateRoom">Not selected</dd></div>
+                <div><dt>Rate</dt><dd id="estimateRate">$0</dd></div>
+                <div><dt>Nights</dt><dd id="estimateNights">0</dd></div>
+                <div><dt>Facilities</dt><dd id="estimateFacilities">None</dd></div>
+                <div class="estimate-total-row"><dt>Room Total</dt><dd id="estimateTotal">$0</dd></div>
+            </dl>
+        </aside>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <p>&copy; 2026 Royal Paradise Hotel. All rights reserved.</p>
+</footer>
+</body>
+</html>

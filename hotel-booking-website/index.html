@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Paradise Luxury Hotel</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+    <div class="header-inner">
+        <h1 class="brand">Royal Paradise Luxury Hotel</h1>
+        <nav class="main-nav" aria-label="Main navigation">
+            <a class="active" href="index.html">Home</a>
+            <a href="rooms.html">Rooms</a>
+            <a href="booking.html">Booking</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <img src="images/hotel.jpg" alt="Royal Paradise Luxury Hotel">
+        <div class="hero-overlay"></div>
+        <div class="hero-text">
+            <p class="eyebrow">Five-Star Hospitality</p>
+            <h2>Experience Luxury &amp; Comfort</h2>
+            <p>Elegant rooms, relaxing facilities and friendly service in one beautiful destination.</p>
+            <a class="button button-gold" href="booking.html">Book Your Stay</a>
+        </div>
+    </section>
+
+    <!-- Timer-based JavaScript -->
+    <section class="offer-section section-narrow" aria-live="polite">
+        <p class="section-label">Live Offer</p>
+        <p id="specialOffer" class="offer-message offer-gold">Welcome to Royal Paradise Luxury Hotel</p>
+    </section>
+
+    <section class="welcome-section section-narrow">
+        <div>
+            <p class="section-label">Welcome</p>
+            <h2>A Comfortable Five-Star Stay</h2>
+            <p>Enjoy modern rooms, a swimming pool, fine dining and comfortable spaces for a relaxing hotel experience.</p>
+        </div>
+        <figure class="pool-figure">
+            <img src="images/pool.jpg" alt="Swimming pool at Royal Paradise Hotel">
+            <figcaption>Relax by our swimming pool</figcaption>
+        </figure>
+    </section>
+
+    <!-- User action with DOM and event listener -->
+    <section class="facilities-section section-narrow">
+        <div class="section-heading-row">
+            <div>
+                <p class="section-label">Hotel Services</p>
+                <h2>Hotel Facilities</h2>
+            </div>
+            <button id="facilityButton" class="button button-dark" type="button">Show Facilities</button>
+        </div>
+
+        <div id="facilityDetails" class="facility-grid hidden">
+            <article class="facility-card">
+                <h3>Luxury Rooms</h3>
+                <p>Comfortable suites with modern furniture and hotel services.</p>
+            </article>
+            <article class="facility-card">
+                <h3>Swimming Pool</h3>
+                <p>A relaxing outdoor pool for guests during their stay.</p>
+            </article>
+            <article class="facility-card">
+                <h3>Fine Dining</h3>
+                <p>Enjoy fresh meals in our hotel restaurant.</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- HTML5 video controlled with JavaScript -->
+    <section class="media-section section-narrow">
+        <div class="media-copy">
+            <p class="section-label">Hotel Tour</p>
+            <h2>Watch Our Hotel Video</h2>
+            <p>The buttons below use JavaScript to control the HTML5 video.</p>
+            <div class="video-controls">
+                <button id="playVideo" class="button button-gold" type="button">Play Video</button>
+                <button id="pauseVideo" class="button button-dark" type="button">Pause Video</button>
+            </div>
+            <p id="videoStatus" class="video-status">Video is ready.</p>
+        </div>
+
+        <div class="video-wrapper">
+            <video id="hotelVideo" controls preload="metadata">
+                <source src="media/royal-paradise-tour.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <p>&copy; 2026 Royal Paradise Hotel. All rights reserved.</p>
+</footer>
+</body>
+</html>
